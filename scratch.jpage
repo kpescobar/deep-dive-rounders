@@ -1,0 +1,12 @@
+value = -100;
+increment = 7;
+
+int sign = Math.round(Math.signum(value));
+    value = Math.abs(value);
+    increment = Math.abs(increment);
+    int truncated = value / increment;
+    int remainder = value % increment;
+    int rounded = truncated * increment;
+    int adjustment = (2 * remainder >= increment) ? increment : 0;
+
+    System.out.println(return sign * (rounded + adjustment)
